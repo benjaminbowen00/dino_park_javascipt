@@ -38,6 +38,7 @@ describe('Park', function(){
     park.addDinosaur(pteradactyl);
     park.removeAllDinosByType("Tyrannosaurus");
     assert.strictEqual(park.enclosure.length, 1);
+    assert.deepEqual(park.enclosure, [pteradactyl]);
   })
 
   it('can get all dinos offspring rate above 2', function(){
