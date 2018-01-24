@@ -17,14 +17,14 @@ Park.prototype.removeAllDinosByType = function(type){
   this.enclosure = dinoTypeArray;
 }
 
-Park.prototype.findAllDinosOffspringRateAboveTwo = function(){
-  return this.enclosure.filter(dino => dino.offspringRate > 2);
+Park.prototype.findAllDinosOffspringRateAboveAmount = function(amount){
+  return this.enclosure.filter(dino => dino.offspringRate > amount);
 }
 
 Park.prototype.calculateDinosaurs = function(years){
   let total = 0;
   for(let dino of this.enclosure){
-    let dinoTotal = (dino.offspringRate + 1) ** years;
+    dinoTotal = (dino.offspringRate + 1) ** years;
     total += dinoTotal;
   }
   return total;

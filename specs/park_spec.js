@@ -46,7 +46,7 @@ describe('Park', function(){
     park.addDinosaur(tyrannosaurus);
     park.addDinosaur(pteradactyl);
     let dinoHighOffSpringRate = [tyrannosaurus, tyrannosaurus];
-    assert.deepEqual(park.findAllDinosOffspringRateAboveTwo(), dinoHighOffSpringRate);
+    assert.deepEqual(park.findAllDinosOffspringRateAboveAmount(2), dinoHighOffSpringRate);
   })
 
   it('should be able to calculate number of dinosaurs after 1 year starting with 1 dinosaur', function(){
